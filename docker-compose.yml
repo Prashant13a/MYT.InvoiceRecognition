@@ -1,0 +1,14 @@
+services:
+  invoice-recognition:
+    build:
+      context: .
+      dockerfile: MYT.InvoiceRecognition.Api/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      AzureDocumentIntelligence__Endpoint: ${AZURE_ENDPOINT}
+      AzureDocumentIntelligence__ApiKey: ${AZURE_API_KEY}
+      OpenAI__ApiKey: ${OPENAI_API_KEY:-}
+      OpenAI__FineTunedSupplierModel: ${OPENAI_SUPPLIER_MODEL:-}
+      Security__ApiKey: ${INVOICE_API_KEY:-}

@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "docs",
+      "environmentVariables": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "applicationUrl": "http://localhost:8000"
+    },
+    "https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "docs",
+      "environmentVariables": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "applicationUrl": "https://localhost:7048;http://localhost:8000"
+    }
+  }
+}
